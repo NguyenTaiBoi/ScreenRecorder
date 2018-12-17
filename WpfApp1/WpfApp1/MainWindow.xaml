@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="gridMain">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>-->
+        <DockPanel Name="dockPanMain" LastChildFill="True" >
+            <Menu Name="menuBarTop" Height="23" DockPanel.Dock="Top">
+                <MenuItem Header="Capture Video">
+                    <MenuItem Header="Full Screen" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="Custom Area"/>
+                    <MenuItem Header="Last Area"/>
+                    <MenuItem Header="Area Auto Detection"/>
+                    <MenuItem Header="Task"/>
+
+                </MenuItem>
+                <MenuItem Header="Screen Shot">
+                    <MenuItem Header="Full Screen"/>
+                    <MenuItem Header="Custom Area"/>
+                    <MenuItem Header="Last Area"/>
+                    <MenuItem Header="Area Auto Detection"/>
+                </MenuItem>
+                <MenuItem Header="Capture Audio">
+                    <MenuItem Header="High Bitrate"/>
+                    <MenuItem Header="Medium Bitrate"/>
+                    <MenuItem Header="Low Bitrate"/>
+                </MenuItem>
+            </Menu>
+            
+            <Button Content="Clear History" Height="23" Width="100" Margin="0" HorizontalAlignment="Left" DockPanel.Dock="Bottom" />
+            <Menu Name="menuBarBottom" Height="23" DockPanel.Dock="Bottom" FlowDirection="RightToLeft">
+                <MenuItem Header="Settings" Click="MenuItem_Click" />
+                <MenuItem Header="Help"/>
+                <MenuItem Header="Upgrade"/>
+            </Menu>
+            <ListView Margin="10" Name="listViewUser">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="File Name" Width="220" DisplayMemberBinding="{Binding Name}" ></GridViewColumn>
+                        <GridViewColumn Header="Path" Width="50" DisplayMemberBinding="{Binding Path}"/>
+                        <GridViewColumn Header="Edit" Width="50" DisplayMemberBinding="{Binding Edit}"/>
+                        <GridViewColumn Header="More" Width="50" DisplayMemberBinding="{Binding More}"/>
+                        <GridViewColumn Header="Size" Width="80" DisplayMemberBinding="{Binding Size}"/>
+                        <GridViewColumn Header="Duration" Width="150" DisplayMemberBinding="{Binding Duration}"/>
+                        <GridViewColumn Header="Delete" Width="120" DisplayMemberBinding="{Binding delete}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+    </Grid>
+</Window>
+    
+    
+    
+    
+    
+    
+    
